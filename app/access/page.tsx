@@ -3,7 +3,7 @@ import { SNSIcons } from "../components/snsIcons";
 import { PageContents } from "../components/pageContents";
 import { PageMain } from "../components/pageMain";
 import { PageComingSoon } from "../components/PageComingSoon";
-
+import { Access } from "../components/access/access";
 
 export default function Page() {
     return(
@@ -11,10 +11,9 @@ export default function Page() {
             <SNSIcons/>
             <PageMain title="交通アクセス"/>
             <Header/>
-            <PageComingSoon/>
-            {/* <PageContents>
-
-            </PageContents> */}
+            <PageContents>
+                <Access/>
+            </PageContents>
         </div>
     )
 }

@@ -31,11 +31,11 @@ export function BackTopButton() {
             handleClick()
         }}
         className={clsx(
-            "fixed bottom-0 right-0",
+            "fixed bottom-0 right-0 z-50",
             isHide ? "" : "hidden"
 
         )}>
-            <div className="bg-blue-50 rounded-full md:p-4 md:m-6 p-2 m-2">
+            <div className="bg-[#7bbdbc] rounded-full md:p-4 md:m-6 p-2 m-2">
                 <Image
                 src={backTopButtonImage}
                 alt=""

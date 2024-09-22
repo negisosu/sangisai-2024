@@ -5,6 +5,10 @@ import {client} from '@/lib/client';
 //企画・出展紹介のところで検索と、ジャンル分けができるやつ
 export const getExhibitions = async (search: string = "", tag: string = "") => {
 
+    if(tag == "全て"){
+        tag = ""
+    }
+
     //microcms-sdkのfiltersの都合で一旦書き換え
     tag = tag == "" ? "" : `tag[contains]${tag}`
 

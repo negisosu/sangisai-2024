@@ -3,7 +3,7 @@
 import { header } from "@/consts/const"
 import clsx from "clsx"
 import { useState } from "react"
-import spHeaderButtonImage from "@/app/image/header/spHeaderButton.png"
+import spHeaderButtonImage from "@/app/image/header/spHeader.png"
 import spHeaderMenuButtonImage from "@/app/image/header/spHeaderMenuButton.png"
 import Image from "next/image"
 import Link from "next/link"
@@ -38,7 +38,7 @@ function SPHeaderButton () {
     return(
         <div>
             <Image
-            className=" rounded-full"
+            className="bg-[#7bbdbc] rounded-full"
             src={spHeaderButtonImage}
             width={50}
             height={50}

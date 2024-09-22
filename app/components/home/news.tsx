@@ -12,8 +12,8 @@ export async function News() {
         <div>
             <MyH2 small="ニュース＆トピックス" large="news&topics" image={newsH2Image} image2={""}/>
             <div className="bg-white w-full">
-                <Newss data={data}/>
-                <NewsButton/>
+                    <Newss data={data}/>
+                    <NewsButton/>
             </div>
         </div>
     )

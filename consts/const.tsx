@@ -6,6 +6,7 @@ import InstagramImage from "@/app/image/SNSicons/Instagram.png"
 
 
 export const tags = [//ジャンル分けはまだ変化する可能性があるから別ファイル管理
+    '全て',
     'イベント',
     '物販',
     '飲食店',

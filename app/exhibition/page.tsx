@@ -1,6 +1,4 @@
 import { getExhibitions } from "@/lib/action";
-import { Search } from "../components/exhibition/search";
-import { Tags } from "../components/exhibition/tags";
 import { Exhibitions } from "../components/exhibition/exhibitions";
 import { SNSIcons } from "../components/snsIcons";
 import { PageMain } from "../components/pageMain";
@@ -21,17 +19,20 @@ export default async function Page(
     const tag = searchParams.tag || ""
 
     //企画・出展の全取得、query,tagがあるときは検索や絞り込みされる
-    const data = await getExhibitions(query, tag);
+    const data = await getExhibitions(query, tag) || "None";
 
     //console
     console.log(data)
     console.log("----------------------------------------------------")
     console.log("query:",query)
     console.log("tag:",tag)
-    data?.contents.map((content:any) => {
+    data?.contents?.map((content:any) => {
         console.log(content.title,"tag:",content.tag)
     })
     console.log("----------------------------------------------------")
+    if(data == "None"){
+        console.log("None")
+    }
     //console
 
     return(
@@ -39,10 +40,7 @@ export default async function Page(
             <SNSIcons/>
             <PageMain title="企画紹介"/>
             <Header/>
-            <PageComingSoon/>
-            {/* <Search/>
-            <Tags/>
-            <Exhibitions data={data}/> */}
+            <Exhibitions data={data}/>
         </div>
     )
 }

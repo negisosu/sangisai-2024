@@ -5,7 +5,7 @@ import { m_plus_rounded_1c_300 } from "@/fonts/fonts";
 import { BackTopButton } from "./components/backTopButton";
 
 export const metadata: Metadata = {
-  title: "参議祭2024",
+  title: "産技祭2024",
   description: "",
 };
 

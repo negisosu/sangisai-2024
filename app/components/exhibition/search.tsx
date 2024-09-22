@@ -12,7 +12,7 @@ export function Search() {
 
     const searchparams = useSearchParams()
     const pathname = usePathname()
-    const { replace} = useRouter()
+    const router = useRouter()
 
 
     const handleSearch = useDebouncedCallback((term: string) => {
@@ -23,20 +23,23 @@ export function Search() {
             params.set('query', term);
             params.delete('query')
         }
-        replace(`${pathname}?${params.toString()}`)
+        router.push(`${pathname}?${params.toString()}`, { scroll : false })
     },300)
 
 
     return(
-        <div className="w-[80%]">
-            <input
-            className="w-full border p-[1.6vw] m-[2%] md:p-[0.6vw] md:m-[1%] rounded-[0.5vw]"
-            placeholder="検索"
-            onChange={(e) => {
-                handleSearch(e.target.value)
-            }}
-            defaultValue={searchparams.get('query')?.toString()}
-            />
+        <div className="flex justify-center items-center">
+            <div className="w-full md:mx-5 mx-2">
+                <input
+                className="w-full border md:p-2 p-1 rounded-[0.5vw]"
+                placeholder="企画を検索"
+                onChange={(e) => {
+                    handleSearch(e.target.value)
+                }}
+                defaultValue={searchparams.get('query')?.toString()}
+                />
+            </div>
         </div>
+
     );
 }
