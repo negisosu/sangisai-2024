@@ -60,10 +60,11 @@ export function Exhibition({content} : { content: any }) {
             alt=""
             className="object-cover md:h-48 h-28"
             />
-            <div className={`${zen_kurenaido.className} bg-white md:h-60 h-40 w-full`}>
-                <div className="md:text-lg text-xs md:m-2 md:block hidden">2F | 2400</div>
+            <div className={`${zen_kurenaido.className} bg-white md:h-60 h-44 w-full`}>
+                <div className="md:text-lg text-xs md:m-2 md:block hidden">{`${content.place.floor}F-${content.place.name} | ${content.exhibitionName}`}</div>
                 <div className="md:text-xl text-sm md:mx-4 md:my-2 mx-2 my-1 underline text-center text-blue-500 hover:text-blue-700">{content.title}</div>
-                <div className="md:text-[1.6vw] md:leading-6 text-xs">{content.shortBody}</div>
+                <div className="md:text-[1.6vw] md:leading-6 text-xs md:p-2 p-1">{content.shortBody}</div>
+                <div className="md:hidden text-right block text-xs text-blue-500 m-2">もっと見る→</div>
             </div>
         </div>
     )
