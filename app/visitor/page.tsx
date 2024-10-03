@@ -19,12 +19,12 @@ export default function Page(){
             <Header/>
             <PageContents>
                 <Attention/>
-                <LostItem/>
                 <Pamphlet/>
+                {/* <LostItem/>
                 <Special/>
                 <Association/>
                 <Samezu/>
-                <Message/>
+                <Message/> */}
             </PageContents>
         </div>
     )

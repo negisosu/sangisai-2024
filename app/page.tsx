@@ -6,6 +6,7 @@ import { PageContents } from "./components/pageContents";
 import { News } from "./components/home/news";
 import { Greetings } from "./components/home/greetings";
 import { MyH2 } from "./components/myH2";
+import { Suspense } from "react";
 
 
 export default async function Home() {

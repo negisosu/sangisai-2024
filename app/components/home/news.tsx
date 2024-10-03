@@ -1,25 +1,71 @@
 import newsH2Image from "@/app/image/home/newsH2.png"
 import { MyH2 } from "../myH2"
 import { PageContentsComingSoon } from "../pageContentsComingSoon"
-import { getHomeNews } from "@/lib/action"
+import { getHomeNews, getNews } from "@/lib/action"
 import Link from "next/link"
+import { Suspense } from "react"
+import { NewsSkeleton } from "../skeletons/newsSkeleton"
+import { ScrollAnimation } from "../scrollAnimation"
 
-export async function News() {
-
-    const data = await getHomeNews()
+export function News() {
 
     return(
         <div>
             <MyH2 small="ニュース＆トピックス" large="news&topics" image={newsH2Image} image2={""}/>
+            <ScrollAnimation>
             <div className="bg-white w-full">
-                    <Newss data={data}/>
+                <Suspense fallback={<NewsSkeleton/>}>
+                <Newss/>
+                </Suspense>
                     <NewsButton/>
             </div>
+            </ScrollAnimation>
         </div>
     )
 }
 
-export function Newss({ data }: { data: any}) {
+export async function Newss() {
+
+    // console.log('Fetching revenue data...');
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
+    //データフェッチを確かめる遅延関数
+
+    const data = await getHomeNews()
+
+    if(!data){
+        return (
+            <div className="w-full h-52 flex items-center justify-center text-center">
+                データが読み込めませんでした。<br/>時間をおいて再度お試しください。
+            </div>
+        )
+    }
+
+    return(
+        <div className="flex flex-col items-center justify-center md:py-20 py-10">
+        {
+            data?.contents?.map((news: any) => {
+                return <NewsOne key={news.id} news={news}/>
+            })
+        }
+        </div>
+    )
+}
+
+export async function NewssPage() {
+
+    // console.log('Fetching revenue data...');
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
+
+    const data = await getNews()
+
+    if(!data){
+        return (
+            <div className="w-full h-52 flex items-center justify-center text-center">
+                データが読み込めませんでした。<br/>時間をおいて再度お試しください。
+            </div>
+        )
+    }
+
     return(
         <div className="flex flex-col items-center justify-center md:py-20 py-10">
         {
@@ -34,7 +80,7 @@ export function Newss({ data }: { data: any}) {
 function NewsOne({ news } : { news: any}) {
     return(
         <Link
-        className="flex md:h-16 h-12 w-[80%]  border-b-2 md:text-lg text-xs bg-white hover:bg-gray-100"
+        className="flex md:h-16 h-12 w-[80%] md:border-b-2 border-b-2 md:text-lg text-xs bg-white hover:bg-gray-100"
         href={`/news/${news.id}`}
         >
             <div className="w-1/3 flex items-center justify-center">{changeDate(news.createdAt)}</div>

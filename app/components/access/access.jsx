@@ -1,14 +1,18 @@
 
 import accessImage from "@/app/image/access/accessImage.png"
+import { m_plus_rounded_1c_300, m_plus_rounded_1c_500, zen_kurenaido } from "@/fonts/fonts"
 import Image from "next/image"
+import { ScrollAnimation } from "../scrollAnimation"
 
 export function Access() {
     return(
         <div>
-            <div className="md:flex w-full">
+            <ScrollAnimation>
+            <div className={`${zen_kurenaido.className} md:flex w-full`}>
                 <AccessMap/>
                 <Guide/>
             </div>
+            </ScrollAnimation>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103803.40694776972!2d139.61678226249998!3d35.60660699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188a75945ef685%3A0xfa6c51618d6f5d49!2z5p2x5Lqs6YO956uL55Sj5qWt5oqA6KGT6auY562J5bCC6ZaA5a2m5qChIOWTgeW3neOCreODo-ODs-ODkeOCuS1Ub2t5byBNZXRyb3BvbGl0YW4gQ29sbGVnZSBvZiBJbmR1c3RyaWFsIFRlY2hub2xvZ3kgU2hpbmFnYXdhIGNhbXB1cy0!5e0!3m2!1sja!2sjp!4v1726805481368!5m2!1sja!2sjp" className="w-full h-[600px]" loading="lazy"></iframe>
         </div>
     )

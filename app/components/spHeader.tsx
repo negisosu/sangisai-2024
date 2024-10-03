@@ -38,7 +38,7 @@ function SPHeaderButton () {
     return(
         <div>
             <Image
-            className="bg-[#7bbdbc] rounded-full"
+            className="bg-[#ffb444] rounded-full border-black border"
             src={spHeaderButtonImage}
             width={50}
             height={50}
@@ -50,7 +50,7 @@ function SPHeaderButton () {
 
 function SPHeaderMenu({ isOpen, setIsOpen}: { isOpen: boolean, setIsOpen: React.Dispatch<React.SetStateAction<boolean>>}) {
     return(
-        <div className="w-screen h-screen fixed top-0 left-0">
+        <div className="w-screen h-screen fixed top-0 left-0 z-50">
             <div className="flex">
                 <div
                 className="bg-gray-500 h-screen w-[40%] opacity-30"

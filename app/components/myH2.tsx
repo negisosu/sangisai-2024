@@ -1,10 +1,12 @@
 import { zen_kurenaido } from "@/fonts/fonts";
 import Image, { StaticImageData } from "next/image";
+import { ScrollAnimation } from "./scrollAnimation";
 
 
 export function MyH2({ small, large, image, image2 } : { small: string, large: string, image: StaticImageData | string, image2: StaticImageData | string }) {
 
     return(
+        <ScrollAnimation>
         <div className="flex items-center justify-center my-10">
             <div className="flex">
                 
@@ -16,6 +18,7 @@ export function MyH2({ small, large, image, image2 } : { small: string, large: s
                 <MyH2Image image={image2}/>
             </div>
         </div>
+        </ScrollAnimation>
     )
 }
 

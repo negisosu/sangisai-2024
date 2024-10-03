@@ -2,6 +2,7 @@ import { greetings } from "@/consts/const";
 import { MyH2 } from "../myH2";
 import { zen_kurenaido } from "@/fonts/fonts";
 import Image, { StaticImageData } from "next/image";
+import { ScrollAnimation } from "../scrollAnimation";
 
 
 export function Greetings() {
@@ -13,10 +14,12 @@ export function Greetings() {
             <div className="flex flex-col gap-10">
                 {greetings.map((greeting) => {
 
-                    return <div key={greetings.indexOf(greeting)}>
-                        <GreetingImage image={greeting.image}/>
-                        <Greeting greeting={greeting}/>
-                    </div>
+                    return <ScrollAnimation>
+                        <div key={greetings.indexOf(greeting)}>
+                            <GreetingImage image={greeting.image}/>
+                            <Greeting greeting={greeting}/>
+                        </div>
+                    </ScrollAnimation>
                 })}
             </div>
         </div>

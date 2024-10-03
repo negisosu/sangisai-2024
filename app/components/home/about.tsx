@@ -3,14 +3,17 @@ import { MyH3 } from "../myH3";
 import aboutImage from "@/app/image/home/aboutImage.png"
 import { abouts } from "@/consts/const";
 import { zen_kurenaido } from "@/fonts/fonts";
+import { ScrollAnimation } from "../scrollAnimation";
 
 export function About() {
     return(
+        <ScrollAnimation>
         <div className="bg-white w-full">
             <AboutImage/>
             <MyH3 small="アバウト" large="about"/>
             <AboutBody/>
         </div>
+        </ScrollAnimation>
     )
 }
 
@@ -38,7 +41,7 @@ function AboutImage() {
 function AboutBody() {
     return(
         <div className="flex items-center justify-center md:my-20 my-10 md:mx-10 mx-5">
-        <div className={`${zen_kurenaido.className} flex flex-col md:gap-14 gap-7`}>
+        <div className={`${zen_kurenaido.className} flex flex-col md:gap-14 gap-7 md:mb-16 mb-8`}>
             {
                 abouts.map((about) => {
                     return(

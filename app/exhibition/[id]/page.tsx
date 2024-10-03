@@ -1,8 +1,16 @@
 import { Header } from "@/app/components/header"
 import { HomeButton } from "@/app/components/homeButton"
+import { MyH2 } from "@/app/components/myH2"
+import { zen_kurenaido } from "@/fonts/fonts"
 import { getOne } from "@/lib/action"
 import clsx from "clsx"
 import Image from "next/image"
+import Link from "next/link"
+import ExhibitionMenuImage from "@/app/image/exhibition/exhibitionMenuImage.png"
+import { LongBody } from "@/app/components/exhibition/customs/longBody"
+import { OtherImage } from "@/app/components/exhibition/customs/OtherImage"
+import { Menu } from "@/app/components/exhibition/customs/Menu"
+import { Links } from "@/app/components/exhibition/customs/Links"
 
 export default async function Page(
     //dynamic routingの説明はだるいからちょっとパス
@@ -28,6 +36,7 @@ export default async function Page(
 
     //console
     console.log(data)
+    console.log(data.option[0].urls)
     //console
 
     return(
@@ -37,11 +46,39 @@ export default async function Page(
             <Header/>
             <div className="flex items-center justify-center">
                 <div className="bg-white md:w-[80%] w-[90%] md:my-10 my-5">
-                    {data.option.map((content: any) => {
-                        return(
-                            <LoopOptions content={content} key={content}/>
-                        )
-                    })}
+                    <div className="md:text-5xl text-3xl md:my-8 my-4 text-center">{data.title}</div>
+                    <div className="md:flex md:my-10 my-4">
+                        <div className="md:w-1/2 md:text-xl text-sm text-center md:m-8 m-2">
+                            {data.shortBody}
+                        </div>
+                        <div className="md:w-1/2">
+                            <div className="flex items-center justify-center md:hidden">
+                                <Image
+                                src={`${data.image.url}?width=${data.image.width}&height=${data.image.height}`}
+                                width={300}
+                                height={300}
+                                alt=""
+                                />
+                            </div>
+                            <div className="md:flex items-center justify-center">
+                                <Image
+                                src={`${data.image.url}?width=${data.image.width}&height=${data.image.height}`}
+                                width={600}
+                                height={600}
+                                alt=""
+                                className="w-[80%] h-auto md:block hidden"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    {
+                        //その他のコンテンツの繰り返しフィールドの部分
+                        data.option.map((content: any) => {
+                            return(
+                                <LoopOptions content={content} key={content}/>
+                            )
+                        })
+                    }
                 </div>
 
             </div>
@@ -50,40 +87,12 @@ export default async function Page(
 }
 
 function LoopOptions({content}: {content: any}) {
-    switch(content.fieldId){
+    switch(content?.fieldId){
         case "longBody":
-            return(
-                <div
-                key={content}
-                className={
-                    clsx(
-                    "md:block hidden",
-                    "py-10 px-12",
-                    "text-xl [&_h5]:text-sm [&_h4]:text-lg [&_h3]:text-2xl [&_h2]:text-3xl [&_h1]:text-4xl",
-                    "leading-10 [&_h5]:my-1 [&_h4]:my-3 [&_h3]:my-5 [&_h2]:my-7 [&_h1]:my-9",
-                    "[&_a]:text-purple-500 [&_a]:underline"
-                )
-                }
-                dangerouslySetInnerHTML={{
-                    __html: content.body
-                }}/>
-            )
+            return <LongBody content={content}/>
         case "OtherImage":
-            return(
-                <div>
-                    {
-                        content.images.map((image: any) => {
-                            return(
-                                <Image
-                                key={image}
-                                src={image.url}
-                                alt=""
-                                height={300}
-                                width={300}/>
-                            )
-                        })
-                    }
-                </div>
-            )
+            return <OtherImage content={content}/>
+        case "links":
+            return <Links content={content}/>
     }
 }

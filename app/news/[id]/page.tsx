@@ -24,11 +24,13 @@ export default async function Page( { params }: { params: { id: string }}) {
                 <div
                 className={
                     clsx(
+                    `${zen_kurenaido.className}`,
                     "md:block hidden",
                     "py-10 px-12",
                     "text-xl [&_h5]:text-sm [&_h4]:text-lg [&_h3]:text-2xl [&_h2]:text-3xl [&_h1]:text-4xl",
                     "leading-10 [&_h5]:my-1 [&_h4]:my-3 [&_h3]:my-5 [&_h2]:my-7 [&_h1]:my-9",
-                    "[&_a]:text-purple-500 [&_a]:underline"
+                    "[&_a]:text-purple-500 [&_a]:underline",
+                    "[&_img]:w-[70%] [&_img]:h-auto [&_img]:md:my-6 [&_img]:my-3 [&_img]:mx-[15%]"
                 )
                 }
                 dangerouslySetInnerHTML={{

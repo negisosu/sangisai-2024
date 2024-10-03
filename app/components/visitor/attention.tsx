@@ -5,11 +5,13 @@ import { zen_kurenaido } from "@/fonts/fonts"
 import Image from "next/image"
 import StaffFront from "@/app/image/visitor/staffFront.png"
 import StaffBack from "@/app/image/visitor/staffBack.png"
+import { ScrollAnimation } from "../scrollAnimation"
 
 export function Attention() {
     return(
         <div>
             <MyH2 small="" large="お願い" image={""} image2={""}/>
+            <ScrollAnimation>
             <div className="bg-white w-full">
             <div className={`${zen_kurenaido.className} md:p-10 p-5 md:text-xl text-sm`}>
                 <p className="">来校の皆様に快適にお過ごしいただけるように、以下の点にご協力いただきますようお願いいたします。</p>
@@ -41,6 +43,7 @@ export function Attention() {
                 </div>
             </div>
             </div>
+            </ScrollAnimation>
         </div>
     )
 }

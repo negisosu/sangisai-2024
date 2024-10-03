@@ -56,11 +56,10 @@ export const getExhibitionsFloor = async (floor: string) => {
             },
             endpoint: "exhibition",
             queries: {
-                limit: 100,
+                limit: getMax,
+                filters: `floor[equals]${floor}`
             }
         })
-
-        console.log("data:",data)
 
         return data
     }catch(err) {

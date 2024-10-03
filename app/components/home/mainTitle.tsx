@@ -9,7 +9,7 @@ export function MainTitle() {
             >
                 <h2 className={`${m_plus_rounded_1c_300.className} md:text-4xl text-3xl`}>SanGi FEsT .</h2>
                 <h1 className={`${m_plus_rounded_1c_500.className} md:text-9xl text-5xl`}>産技祭 2024</h1>
-                <h2 className={`${m_plus_rounded_1c_300.className} md:text-4xl text-xl text-white underline`}>2024/10/28(Sat)-2024/10/29(Sun)</h2>
+                <h2 className={`${m_plus_rounded_1c_300.className} md:text-4xl text-xl text-white underline`}>2024/10/26(Sat)-2024/10/27(Sun)</h2>
             </div>
         </div>
     )
