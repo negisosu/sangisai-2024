@@ -13,8 +13,8 @@ export function Pamphlet(){
             <MyH2 small="" large="パンフレット" image={pamphletH2Image} image2={""}/>
             <ScrollAnimation>
             <MyP body="以下の表紙をクリックすると電子版パンフレットをご覧いただけます。"/>
-            {/* <PamphletComingSoon/> */}
-            <div className="flex items-center justify-center md:p-20 py-10">
+            <PamphletComingSoon/>
+            {/* <div className="flex items-center justify-center md:p-20 py-10">
                 <Image
                 src={MainImage}
                 alt=""
@@ -22,7 +22,7 @@ export function Pamphlet(){
                 height={1000}
                 className=" md:w-[80%] w-full h-auto"
                 />
-            </div>
+            </div> */}
             </ScrollAnimation>
         </div>
     )

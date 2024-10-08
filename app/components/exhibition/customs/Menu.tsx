@@ -12,6 +12,7 @@ export function Menu({ content } : { content: any}) {
                 height={content.image.height}
                 alt=""
                 className=""
+                unoptimized={true}//繰り返し表示なので最適化オフ
                 />
             </div>
     </div>

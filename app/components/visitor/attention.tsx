@@ -32,12 +32,14 @@ export function Attention() {
                         width={140}
                         height={140}
                         alt=""
+                        unoptimized={true}
                         />
                         <Image
                         src={StaffBack}
                         width={140}
                         height={140}
                         alt=""
+                        unoptimized={true}
                         />
                     </div>
                 </div>

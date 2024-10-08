@@ -1,5 +1,7 @@
 'use client'
 
+import { zen_kurenaido } from "@/fonts/fonts";
+import clsx from "clsx";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
@@ -26,21 +28,29 @@ export function Floors() {
             params.set('floor', term)
             params.delete('floor')
         }
+        params.delete("id")
         router.push(`${pathname}?${params.toString()}`, { scroll: false})
     }
 
     return(
-        <div className="flex">
+        <div className="w-full h-[20vw] flex items-center justify-center md:text-xl text-sm">
             {floors.map((floor) => {
-                return <div key={floor}>
-                    <button
-                    className="bg-gray-50 h-10 w-10"
-                    onClick={() => {
-                        handleFloor(`${floor}`)
-                    }}>
+                return <button
+                key={floor}
+                className={clsx(
+                    " p-[4vw] rounded-lg",
+                    `${floor}` == params.get("floor") ? " md:border-4 border-2 border-blue-300" : ""
+                )}
+                onClick={() => {
+                    handleFloor(`${floor}`)
+                }}
+                >
+                    <div
+                    className={`${zen_kurenaido.className}`}
+                    >
                         {`${floor}F`}
-                    </button>
-                </div>
+                    </div>
+                </button>
             })}
         </div>
     )

@@ -36,7 +36,6 @@ export default async function Page(
 
     //console
     console.log(data)
-    console.log(data.option[0].urls)
     //console
 
     return(

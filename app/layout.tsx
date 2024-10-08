@@ -14,6 +14,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="ja">
       <body className={`${m_plus_rounded_1c_300.className}`}>

@@ -8,8 +8,8 @@ export const areas = [
         y:10,
     },
     {
-        x:20,
-        y:20,
+        x:81,
+        y:45,
     },
     {
         x:30,
@@ -40,8 +40,8 @@ export const areas = [
         y:0,
     },
     {//10
-        x:0,
-        y:0,
+        x:80,
+        y:80,
     },
     {
         x:0,

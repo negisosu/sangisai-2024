@@ -8,21 +8,23 @@ import { getExhibitions } from "@/lib/action"
 
 export async function Exhibitions({ query, tag  }: { query: string, tag: string }) {
 
+
+
         //企画・出展の全取得、query,tagがあるときは検索や絞り込みされる
         const data = await getExhibitions(query, tag) || "None";
 
         //console
-        console.log(data)
-        console.log("----------------------------------------------------")
-        console.log("query:",query)
-        console.log("tag:",tag)
-        data?.contents?.map((content:any) => {
-            console.log(content.title,"tag:",content.tag)
-        })
-        console.log("----------------------------------------------------")
-        if(data == "None"){
-            console.log("None")
-        }
+        // console.log(data)
+        // console.log("----------------------------------------------------")
+        // console.log("query:",query)
+        // console.log("tag:",tag)
+        // data?.contents?.map((content:any) => {
+        //     console.log(content.title,"tag:",content.tag)
+        // })
+        // console.log("----------------------------------------------------")
+        // if(data == "None"){
+        //     console.log("None")
+        // }
         //console
     
 
@@ -69,7 +71,8 @@ export async function Exhibitions({ query, tag  }: { query: string, tag: string 
 }
 
 export function Exhibition({content} : { content: any }) {
-    console.log(content)
+    
+    console.log("content: ",content)
     return(
         <div className="">
             <Image
@@ -78,6 +81,7 @@ export function Exhibition({content} : { content: any }) {
             height={500}
             alt=""
             className="object-cover md:h-48 h-28"
+            unoptimized={true}//繰り返し表示なので最適化オフ
             />
             <div className={`${zen_kurenaido.className} bg-white md:h-60 h-44 w-full`}>
                 <div className="md:text-lg text-xs md:m-2 md:block hidden">{`${content.floor}F-${content.place} | ${content.exhibitionName}`}</div>

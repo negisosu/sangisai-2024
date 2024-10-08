@@ -6,7 +6,7 @@ import { Header } from "../components/header";
 import { PageComingSoon } from "../components/PageComingSoon";
 import { Suspense } from "react";
 
-export default function Page(
+export default async function Page(
     { searchParams } : {//URLのパラメーターを読める固定の名前（searchParams）
         searchParams : {
             query : string,
@@ -18,6 +18,9 @@ export default function Page(
     //パラメーターのqueryとtag（ないときは勝手に空文字列にする）
     const query = searchParams.query || ""
     const tag = searchParams.tag || ""
+
+    //企画・出展の全取得、query,tagがあるときは検索や絞り込みされる
+    const data = await getExhibitions(query, tag) || "None";
 
     return(
         <div>

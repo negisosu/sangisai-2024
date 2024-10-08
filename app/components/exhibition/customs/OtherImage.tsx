@@ -50,7 +50,9 @@ export function OtherImage({ content } :{ content: any}){
                             width={900}
                             height={600}
                             alt=""
-                            className="w-full md:h-96 h-44 object-cover"/>
+                            className="w-full md:h-96 h-44 object-cover"
+                            unoptimized={true}//繰り返し表示なので最適化オフ
+                            />
                         </SwiperSlide>
                     })
                 }
