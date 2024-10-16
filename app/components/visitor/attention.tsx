@@ -20,7 +20,7 @@ export function Attention() {
                         {
                             attention.map((att) => {
                                 return(
-                                    <div className="md:my-6 my-2">
+                                    <div className="md:my-6 my-2" key={attention.indexOf(att)}>
                                         {att}
                                     </div>
                                 )

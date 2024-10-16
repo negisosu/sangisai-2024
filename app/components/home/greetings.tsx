@@ -40,7 +40,7 @@ function Greeting ( { greeting }: {
                     <div>{greeting.title}</div>
                     {greeting.body.map((p) => {
                         return(
-                            <p key={p}>
+                            <p key={greeting.body.indexOf(p)}>
                                 {p}
                             </p>
                         )
