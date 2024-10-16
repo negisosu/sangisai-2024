@@ -14,8 +14,8 @@ export function Greetings() {
             <div className="flex flex-col gap-10">
                 {greetings.map((greeting) => {
 
-                    return <ScrollAnimation>
-                        <div key={greetings.indexOf(greeting)}>
+                    return <ScrollAnimation  key={greetings.indexOf(greeting)}>
+                        <div>
                             <GreetingImage image={greeting.image}/>
                             <Greeting greeting={greeting}/>
                         </div>
