@@ -9,7 +9,7 @@ export default function Page() {
     return(
         <div>
             <SNSIcons/>
-            <PageMain title="交通アクセス"/>
+            <PageMain title="アクセス"/>
             <Header/>
             <PageContents>
                 <Access/>

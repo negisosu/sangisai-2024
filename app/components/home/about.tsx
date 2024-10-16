@@ -53,6 +53,7 @@ function AboutBody() {
                 })
             }
         <div className="md:text-3xl text-xl">入場料無料/予約不要</div>
+        <div className="md:text-2xl text-lg">※ 駐車場はありません。公共交通機関を使ってご来場ください。</div>
         </div>
     </div>
     )

@@ -9,6 +9,7 @@ import { Special } from "../components/visitor/special";
 import { Association } from "../components/visitor/association";
 import { Samezu } from "../components/visitor/samezu";
 import { Message } from "../components/visitor/message";
+import { Stage } from "../components/Stage";
 
 
 export default function Page(){
@@ -19,6 +20,7 @@ export default function Page(){
             <Header/>
             <PageContents>
                 <Attention/>
+                {/* <Stage/> */}
                 <Pamphlet/>
                 {/* <LostItem/>
                 <Special/>

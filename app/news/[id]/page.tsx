@@ -5,12 +5,10 @@ import { SPHeader } from "@/app/components/spHeader"
 import { m_plus_rounded_1c_300, m_plus_rounded_1c_500, m_plus_rounded_1c_700, zen_kurenaido } from "@/fonts/fonts"
 import { getNewsOne } from "@/lib/action"
 import clsx from "clsx"
-import Link from "next/link"
 
 export default async function Page( { params }: { params: { id: string }}) {
 
     const news = await getNewsOne(params.id)
-    console.log(news.body)
 
     return(
         <div>

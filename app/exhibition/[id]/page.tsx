@@ -35,7 +35,7 @@ export default async function Page(
 
 
     //console
-    console.log(data)
+    //console.log(data)
     //console
 
     return(
@@ -46,17 +46,16 @@ export default async function Page(
             <div className="flex items-center justify-center">
                 <div className="bg-white md:w-[80%] w-[90%] md:my-10 my-5">
                     <div className="md:text-5xl text-3xl md:my-8 my-4 text-center">{data.title}</div>
+                    <div className="md:text-2xl text-lg md:m-14 m-8">{`${data.floor}F-${data.place} | ${data.exhibitionName}`}</div>
                     <div className="md:flex md:my-10 my-4">
-                        <div className="md:w-1/2 md:text-xl text-sm text-center md:m-8 m-2">
-                            {data.shortBody}
-                        </div>
-                        <div className="md:w-1/2">
+                        <div className="w-full">
                             <div className="flex items-center justify-center md:hidden">
                                 <Image
                                 src={`${data.image.url}?width=${data.image.width}&height=${data.image.height}`}
                                 width={300}
                                 height={300}
                                 alt=""
+                                unoptimized
                                 />
                             </div>
                             <div className="md:flex items-center justify-center">
@@ -66,6 +65,7 @@ export default async function Page(
                                 height={600}
                                 alt=""
                                 className="w-[80%] h-auto md:block hidden"
+                                unoptimized
                                 />
                             </div>
                         </div>

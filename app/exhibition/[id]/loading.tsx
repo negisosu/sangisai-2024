@@ -1,5 +1,5 @@
+import { Background } from "@/app/components/background";
 import { zen_kurenaido } from "@/fonts/fonts";
-import { Background } from "./components/background";
 
 export default function Loading() {
     return(

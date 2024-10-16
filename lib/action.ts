@@ -2,6 +2,9 @@
 
 import {client} from '@/lib/client';
 
+
+const revalidateTime = 3600
+
 //企画・出展紹介のところで検索と、ジャンル分けができるやつ
 export const getExhibitions = async (search: string = "", tag: string = "") => {
 
@@ -15,7 +18,10 @@ export const getExhibitions = async (search: string = "", tag: string = "") => {
     try{
         const data = await client.get({
             customRequestInit: {
-                cache: "no-store"
+                //cache: "no-store",
+                next: {
+                    revalidate: revalidateTime
+                },
             },
             endpoint: 'exhibition',
             queries: {
@@ -35,7 +41,10 @@ export const getOne = async ( endpoint: string ,id: string ) => {
     try{
         const data = await client.get({
             customRequestInit: {
-                cache: "no-store"
+                //cache: "no-store"
+                next: {
+                    revalidate: revalidateTime
+                },
             },
             endpoint: endpoint,
             contentId: id//idの絞り込み
@@ -52,11 +61,14 @@ export const getExhibitionsFloor = async (floor: string) => {
     try{
         const data = await client.get({
             customRequestInit: {
-                cache: "no-store"
+                //cache: "no-store"
+                next: {
+                    revalidate: revalidateTime
+                },
             },
             endpoint: "exhibition",
             queries: {
-                limit: getMax,
+                limit: 50,
                 filters: `floor[equals]${floor}`
             }
         })
@@ -73,14 +85,19 @@ export const getHomeNews = async () => {
     try{
         const data = await client.get({
             customRequestInit: {
-                cache: "no-store"
+                //cache: "no-store"
+                next: {
+                    revalidate: revalidateTime
+                },
             },
             endpoint: "news",
             queries: {
                 limit: getMax,
             }
         })
-        console.log("data: ", data)
+
+        //console.log("data: ", data)
+
         return data
     }catch(err) {
         console.log(err)
@@ -91,7 +108,10 @@ export const getNews = async () => {
     try{
         const data = await client.get({
             customRequestInit: {
-                cache: "no-store"
+                //cache: "no-store"
+                next: {
+                    revalidate: revalidateTime
+                },
             },
             endpoint: "news",
             queries: {
@@ -99,7 +119,8 @@ export const getNews = async () => {
             }
         })
 
-        console.log(data)
+        //console.log(data)
+
         return data
     }catch(err) {
         console.log(err)
@@ -110,15 +131,41 @@ export const getNewsOne = async (id: string) => {
     try{
         const data = await client.get({
             customRequestInit: {
-                cache: "no-store"
+                //cache: "no-store"
+                next: {
+                    revalidate: revalidateTime
+                },
             },
             endpoint: "news",
             contentId: id
         })
 
-        console.log(data)
+        //console.log(data)
 
         return data
+    }catch(err){
+        console.log(err)
+    }
+}
+
+export const getStages = async (number: number) => {
+    try{
+        const data = await client.get({
+            customRequestInit: {
+                //cache: "no-store",
+                next: {
+                    revalidate: revalidateTime
+                },
+            },
+            endpoint: "stage",
+            queries: {
+                limit: 50,
+                filters: `date[equals]${number}`
+            }
+        })
+
+        return data
+
     }catch(err){
         console.log(err)
     }

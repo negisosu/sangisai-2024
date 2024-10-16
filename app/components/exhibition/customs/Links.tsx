@@ -13,8 +13,6 @@ export function Links({ content } : {
     }
 }) {
 
-    console.log(content)
-
     return(
         <div>
             <div className={`${zen_kurenaido.className} md:text-4xl text-2xl md:m-6 m-3`}>

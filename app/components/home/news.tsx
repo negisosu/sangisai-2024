@@ -96,7 +96,7 @@ export const changeDate = ( date: string) => {
 
 function NewsButton() {
     return(
-        <Link href={"/news"} className="flex items-center justify-center md:pb-10 pb-5">
+        <Link href={"/news"} className="flex items-center justify-center md:pb-10 pb-5" prefetch={false}>
             <div className="flex items-center justify-center bg-orange-500 rounded-full md:w-40 w-24 md:h-16 h-8">
                 <div className="md:text-sm text-[10px] text-white">
                     お知らせ一覧へ→

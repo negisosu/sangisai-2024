@@ -6,7 +6,7 @@ import { BackTopButton } from "./components/backTopButton";
 
 export const metadata: Metadata = {
   title: "産技祭2024",
-  description: "",
+  description: "こちらは2024年度の産技祭ホームページです。開催日程は10月26日と10月27日です。ぜひご来場ください。",
 };
 
 export default function RootLayout({

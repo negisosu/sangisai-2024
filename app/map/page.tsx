@@ -6,9 +6,9 @@ import { PageMain } from "../components/pageMain"
 import { Header } from "../components/header"
 import { PageComingSoon } from "../components/PageComingSoon"
 import { Areas } from "../components/map/Areas"
-import { ExhibitionFloor } from "../components/map/ExhibitionFloor"
 import { Suspense } from "react"
 import { AreasSkeleton } from "../components/skeletons/areasSkeleton"
+import { MapExhibitions } from "../components/map/MapExhibitions"
 
 export default async function Page({searchParams}: {
     searchParams : {
@@ -16,25 +16,36 @@ export default async function Page({searchParams}: {
         id: string
     }
 }) {
-    const floor = searchParams.floor || "1"
-    const id = searchParams.id || "999"
+
+
+    //map復活時コメントアウト解除
+    // const floor = searchParams.floor || "1"
+    // const id = searchParams.id || "999"
+
+
 
     //console
-    console.log("---------floor---------")
-    console.log(floor)
+    // console.log("---------floor---------")
+    // console.log(floor)
     //console
 
+
+    
     return(
         <div>
             <SNSIcons/>
-            <PageMain title="会場マップ"/>
+            <PageMain title="マップ"/>
             <Header/>
-            <div className="bg-white w-[90%] m-[5%]">
+            <PageComingSoon/>
+            {/* <div className="bg-white w-[90%] m-[5%]">
                 <Floors/>
                 <Suspense fallback={<AreasSkeleton/>}>
                     <Areas id={id} floor={floor}/>
                 </Suspense>
-            </div>
+                <Suspense>
+                    <MapExhibitions floor={floor}/>
+                </Suspense>
+            </div> */}
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import { areas } from "@/consts/areas"
 import clsx from "clsx"
-import { Area } from "./Area"
+import { Area, AreaDetail } from "./Area"
 import { Map } from "./map"
 import { Exhibition } from "../exhibition/exhibitions"
 import { getExhibitionsFloor, getOne } from "@/lib/action"
@@ -30,7 +30,8 @@ export async function Areas({ id , floor}: { id: string, floor: string }) {
                 "transition-all  relative md:w-[74%] md:h-[74%] mx-[1%] w-[98%] h-[98%]",
                 id == "999" ? "md:mx-[13%]" : ""
             )}>
-                <div className="">
+                <div className=" border shadow-xl" id="map">
+                    <div/>
                     <Map floor={floor}/>
                 </div>
                 {data.contents.map((content: any) => {
@@ -40,20 +41,28 @@ export async function Areas({ id , floor}: { id: string, floor: string }) {
 
                     console.log(x, y)
 
-                    if(content.id == id){
-
-                    }
-
                     return <div
                     key={content.id}
                     className={clsx(
                         "absolute transition-all",
-                        id == content.id ? " scale-150" : " scale-100"
+                        id == content.id ? " scale-[180%] z-50" : " scale-100"
                     )}
                     style={{ top: `${y}%`, left: `${x}%`}}>
-                        <Area content={content} index={data.contents.indexOf(content) + 1}/>
+                        <Area content={content} index={data.contents.indexOf(content) + 1} id={id}/>
                     </div>
                 })}
+                {/* {areas.map((area) => {
+                    const x = area.x.toString()
+                    const y = area.y.toString()
+
+                    return <div
+                    key={areas.indexOf(area)}
+                    className="absolute"
+                    style={{ top: `${y}%`, left: `${x}%`}}
+                    >
+                        <Area content={{}} index={areas.indexOf(area)} id=""/>
+                    </div>
+                })} */}
             </div>
             <div className={clsx(
                 id == "999" ? "w-0 mx-0 md:opacity-0" : "md:w-[24%]  md:px-[1%] hover:bg-gray-100 md:opacity-100 opacity-0 md:block hidden",

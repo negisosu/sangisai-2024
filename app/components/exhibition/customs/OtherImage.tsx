@@ -10,7 +10,6 @@ import styles from "@/app/css/MySwiper.module.css"
 
 export function OtherImage({ content } :{ content: any}){
 
-    console.log(content.images)
 
     const slideSettings = {
         0: {

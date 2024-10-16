@@ -7,6 +7,7 @@ import { News } from "./components/home/news";
 import { Greetings } from "./components/home/greetings";
 import { MyH2 } from "./components/myH2";
 import { Suspense } from "react";
+import { Stage } from "./components/Stage";
 
 
 export default async function Home() {
@@ -19,6 +20,7 @@ export default async function Home() {
       <PageContents>
         <About/>
         <News/>
+        <Stage/>
         <Greetings/>
       </PageContents>
     </main>
