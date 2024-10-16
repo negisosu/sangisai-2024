@@ -3,6 +3,7 @@ import "./globals.css";
 import { Background } from "./components/background";
 import { m_plus_rounded_1c_300 } from "@/fonts/fonts";
 import { BackTopButton } from "./components/backTopButton";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "産技祭2024",
@@ -21,6 +22,7 @@ export default function RootLayout({
         <BackTopButton/>
         {children}
         <Background/>
+        <SpeedInsights/>
       </body>
     </html>
   );
