@@ -82,6 +82,7 @@ function NewsOne({ news } : { news: any}) {
         <Link
         className="flex md:h-16 h-12 w-[80%] md:border-b-2 border-b-2 md:text-lg text-xs bg-white hover:bg-gray-100"
         href={`/news/${news.id}`}
+        prefetch={false}
         >
             <div className="w-1/3 flex items-center justify-center">{changeDate(news.createdAt)}</div>
             <div className="w-2/3 flex items-center">{news.title}</div>

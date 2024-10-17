@@ -17,11 +17,13 @@ export default async function Home() {
       <SNSIcons/>
       <MainTitle/>
       <Header/>
-      <PageContents>
-        <About/>
-        <News/>
-        <Greetings/>
-      </PageContents>
+      <Suspense>
+        <PageContents>
+          <About/>
+          <News/>
+          <Greetings/>
+        </PageContents>
+      </Suspense>
     </main>
   );
 }

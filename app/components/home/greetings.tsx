@@ -35,7 +35,7 @@ function Greeting ( { greeting }: {
 }}){
     return(
         <div className="bg-white w-full">
-            <div className="flex items-center justify-center md:p-14 p-5">
+            <div className="flex items-center justify-center md:p-14 p-3">
                 <div className={`${zen_kurenaido.className} flex flex-col gap-10 md:text-3xl text-base`}>
                     <div>{greeting.title}</div>
                     {greeting.body.map((p) => {
