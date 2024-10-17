@@ -40,7 +40,7 @@ export async function Exhibitions({ query, tag  }: { query: string, tag: string 
         <div className="md:m-12 m-6 bg-white">
             <div className={`${zen_kurenaido.className} md:text-4xl md:p-8 text-xl p-4 flex`}>
                 <div>
-                    企画一覧
+                    出店一覧
                 </div>
                 <Image
                 src={exhibitionTitleImage}
