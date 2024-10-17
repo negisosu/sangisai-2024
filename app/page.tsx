@@ -20,7 +20,6 @@ export default async function Home() {
       <PageContents>
         <About/>
         <News/>
-        <Stage/>
         <Greetings/>
       </PageContents>
     </main>

@@ -11,8 +11,8 @@ export function PCHeader() {
                         <Link
                         key={url.title}
                         href={url.url}
-                        className="flex items-center justify-center w-1/5 h-full">
-                            <div className="text-[2.2vw]">
+                        className="flex items-center justify-center w-1/6 h-full">
+                            <div className="text-[2vw]">
                                 {url.title}
                             </div>
                         </Link>

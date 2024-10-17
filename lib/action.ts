@@ -4,6 +4,7 @@ import {client} from '@/lib/client';
 
 
 const revalidateTime = 3600
+//秒単位の再キャッシュかけるまでの時間
 
 //企画・出展紹介のところで検索と、ジャンル分けができるやつ
 export const getExhibitions = async (search: string = "", tag: string = "") => {

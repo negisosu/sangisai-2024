@@ -20,7 +20,7 @@ export default async function Page(
     return(
         <div>
             <SNSIcons/>
-            <PageMain title="企画紹介"/>
+            <PageMain title="出店情報"/>
             <Header/>
             <Suspense fallback={<LoadingExhibitions/>}>
             <Exhibitions query={query} tag={tag}/>

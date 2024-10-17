@@ -23,7 +23,11 @@ export const header = [//headerのリンクの項目、落とし物とか追加�
         url: "/visitor",
     },
     {
-        title: "企画紹介",
+        title: "企画・ツアー",
+        url: "/tour"
+    },
+    {
+        title: "出店情報",
         url: "/exhibition",
     },
     {
