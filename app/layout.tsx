@@ -21,6 +21,7 @@ export default function RootLayout({
       <body className={`${m_plus_rounded_1c_300.className}`}>
         <BackTopButton/>
         {children}
+        <div className="h-52"/>
         <Background/>
         <SpeedInsights/>
       </body>

@@ -60,13 +60,16 @@ function GreetingImage ({image} : {image: StaticImageData}) {
             src={image}
             width={200}
             height={200}
-            alt=""/>
+            alt=""
+            unoptimized
+            />
             <Image
             className="md:hidden block"
             src={image}
             width={100}
             height={100}
             alt=""
+            unoptimized
             />
         </div>
     )

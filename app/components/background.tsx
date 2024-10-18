@@ -17,7 +17,8 @@ export function Background() {
         alt=""
         width={1200}
         height={1400}
-        className=" object-top object-cover w-full h-full opacity-50 md:block hidden"/>
+        className=" object-top object-cover w-full h-full opacity-50 md:block hidden"
+        />
       </div>
     )
 }

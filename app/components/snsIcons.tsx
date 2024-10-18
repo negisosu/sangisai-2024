@@ -16,6 +16,7 @@ export function SNSIcons() {
                             alt=""
                             width={60}
                             height={60}
+                            unoptimized
                             />
                         </Link>
                         </div>

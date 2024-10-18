@@ -26,6 +26,7 @@ function AboutImage() {
         width={230}
         height={230}
         alt=""
+        unoptimized
         />
         <Image
         className="md:hidden block"
@@ -33,6 +34,7 @@ function AboutImage() {
         width={100}
         height={100}
         alt=""
+        unoptimized
         />
     </div>
     )

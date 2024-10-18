@@ -39,13 +39,17 @@ function MyH2Image ({ image }: { image: StaticImageData | string }) {
             src={image}
             width={160}
             height={160}
-            alt=""/>
+            alt=""
+            unoptimized
+            />
             <Image
             className="md:hidden block"
             src={image}
             width={80}
             height={80}
-            alt=""/>
+            alt=""
+            unoptimized
+            />
         </div>
     )
 }

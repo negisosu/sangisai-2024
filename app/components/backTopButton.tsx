@@ -43,7 +43,9 @@ export function BackTopButton() {
                 src={backTopButtonImage}
                 alt=""
                 width={30}
-                height={30}/>
+                height={30}
+                unoptimized
+                />
             </div>
         </div>
     )
