@@ -5,6 +5,7 @@ import { Header } from "../components/header"
 import { Map } from "../components/map/map"
 import { PageContents } from "../components/pageContents"
 import { Suspense } from "react"
+import { PageComingSoon } from "../components/PageComingSoon"
 
 export default async function Page({searchParams}: {
     searchParams : {
@@ -28,11 +29,12 @@ export default async function Page({searchParams}: {
             <SNSIcons/>
             <PageMain title="マップ"/>
             <Header/>
-            <PageContents>
+            <PageComingSoon/>
+            {/* <PageContents>
                 <Suspense>
                     <Map floor={floor} id={id}/>
                 </Suspense>
-            </PageContents>
+            </PageContents> */}
         </div>
     )
 }
