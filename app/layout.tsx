@@ -4,6 +4,7 @@ import { Background } from "./components/background";
 import { m_plus_rounded_1c_300 } from "@/fonts/fonts";
 import { BackTopButton } from "./components/backTopButton";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: "産技祭2024",
@@ -24,6 +25,7 @@ export default function RootLayout({
         <div className="h-52"/>
         <Background/>
         <SpeedInsights/>
+        <Analytics/>
       </body>
     </html>
   );
