@@ -2,11 +2,13 @@ import { sponsor } from "@/consts/const";
 import { MyH2 } from "../myH2";
 import Image from "next/image";
 import { m_plus_rounded_1c_500, m_plus_rounded_1c_700, zen_kurenaido } from "@/fonts/fonts";
+import { ScrollAnimation } from "../scrollAnimation";
 
 export function SponsorShip() {
     return(
         <div className="w-full">
             <MyH2 small="" large="協賛" image={""} image2={""}/>
+            <ScrollAnimation>
             <div className="bg-white w-full ">
                 {
                     sponsor.map((company) => {
@@ -25,6 +27,7 @@ export function SponsorShip() {
                     })
                 }
             </div>
+            </ScrollAnimation>
         </div>
     )
 }
