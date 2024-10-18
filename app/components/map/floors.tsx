@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
-const floors = [...Array(8)].map((v, i) => i + 1)//[1~7]の配列
+const floors = [...Array(7)].map((v, i) => i + 1)//[1~7]の配列
 
 export function Floors() {
 
@@ -35,9 +35,6 @@ export function Floors() {
     return(
         <div className="w-full h-[20vw] flex items-center justify-center md:text-xl text-sm">
             {floors.map((floor) => {
-
-
-
                 return <button
                 key={floor}
                 className={clsx(
@@ -51,9 +48,7 @@ export function Floors() {
                     <div
                     className={`${zen_kurenaido.className}`}
                     >
-                        {
-                            floor == 8 ? "体育館" : `${floor}F`
-                        }
+                        {`${floor}F`}
                     </div>
                 </button>
             })}
