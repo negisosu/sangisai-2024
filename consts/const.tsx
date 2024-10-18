@@ -2,6 +2,7 @@ import principal from "@/app/image/home/principal.png"
 import chairperson from "@/app/image/home/chairperson.png"
 import TwitterImage from "@/app/image/SNSicons/Twitter.png"
 import InstagramImage from "@/app/image/SNSicons/Instagram.png"
+import BigechorImage from "@/app/image/home/BIGECHOR.jpg"
 
 
 
@@ -105,4 +106,11 @@ export const attention = [
     "・ペットなどの動物や、植物の持ち込みはご遠慮ください。（ただし、盲導犬をはじめとする介助犬などを伴ってのご来校は可能とさせていただきます。）",
     "・駐車場はありません。公共交通機関を使ってご来場ください。"
 
+]
+
+export const sponsor = [
+    {
+        title: "カラオケビッグエコー様",
+        image: BigechorImage
+    }
 ]

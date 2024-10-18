@@ -8,6 +8,7 @@ import { Greetings } from "./components/home/greetings";
 import { MyH2 } from "./components/myH2";
 import { Suspense } from "react";
 import { Stage } from "./components/Stage";
+import { SponsorShip } from "./components/home/sponsorShip";
 
 
 export default async function Home() {
@@ -22,6 +23,7 @@ export default async function Home() {
           <About/>
           <News/>
           <Greetings/>
+          <SponsorShip/>
         </PageContents>
       </Suspense>
     </main>
