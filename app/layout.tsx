@@ -25,7 +25,6 @@ export default function RootLayout({
         <div className="h-52"/>
         <Background/>
         <SpeedInsights/>
-        <Analytics/>
       </body>
     </html>
   );
