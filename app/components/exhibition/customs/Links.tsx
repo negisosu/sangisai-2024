@@ -24,11 +24,11 @@ export function Links({ content } : {
                         return (
                             <div
                             key={content.urls.indexOf(url)}
-                            className="md:my-8 my-4"
+                            className="md:py-8 py-4"
                             >
                                 <Link
                                 href={url.url}
-                                className="md:text-2xl text-lg text-blue-500 hover:text-blue-700 hover:underline">
+                                className="md:text-2xl text-lg text-blue-500 hover:text-blue-700 hover:underline break-all">
                                     <div>
                                         {url.title}
                                     </div>
