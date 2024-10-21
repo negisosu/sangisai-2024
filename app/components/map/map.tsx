@@ -9,9 +9,6 @@ export async function Map({ floor, id}: { floor: string, id: string}) {
     return(
         <div className="w-full bg-white">
             <Floors/>
-            <div>
-                
-            </div>
         </div>
     )
 }
