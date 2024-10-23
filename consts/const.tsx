@@ -3,6 +3,8 @@ import chairperson from "@/app/image/home/chairperson.png"
 import TwitterImage from "@/app/image/SNSicons/Twitter.png"
 import InstagramImage from "@/app/image/SNSicons/Instagram.png"
 import BigechorImage from "@/app/image/home/BIGECHOR.jpg"
+import koutyouImage from "@/app/image/home/koutyou.jpg"
+import iintyouImage from "@/app/image/home/iintyou.jpeg"
 
 
 
@@ -72,7 +74,8 @@ export const greetings = [
             "テーマする「世界」を垣間見つつ、食品販売も戻った伝統ある産技祭を存分にお楽しみください。"
         ],
         name: "東京都立産業技術高等専門学校 校長 吉澤 昌純",
-        image: principal
+        image: principal,
+        image2: koutyouImage
     },
     {
         title: "実行委員会委員長 ご挨拶",
@@ -83,7 +86,8 @@ export const greetings = [
             "この産技祭が皆様にとって有意義な時間となりますよう心より願い、最後までお楽しみいただければ幸いです。"
         ],
         name: "産技祭実行委員会 委員長 遠山祐希",
-        image: chairperson
+        image: chairperson,
+        image2: iintyouImage
     }
 ]
 
@@ -104,7 +108,8 @@ export const attention = [
     "・校内や敷地内での飲食は周囲にお気遣いください。",
     "・危険物の持ち込みは禁止です。",
     "・ペットなどの動物や、植物の持ち込みはご遠慮ください。（ただし、盲導犬をはじめとする介助犬などを伴ってのご来校は可能とさせていただきます。）",
-    "・駐車場はありません。公共交通機関を使ってご来場ください。"
+    "・駐車場はありません。公共交通機関を使ってご来場ください。",
+    "・もし落とし物をされた方は2階西棟の本部までお越しください。"
 
 ]
 

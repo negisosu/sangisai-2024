@@ -8,15 +8,16 @@ import { ScrollAnimation } from "../scrollAnimation";
 export function Greetings() {
     return(
         <div className="relative z-0">
-            <div className=" absolute w-full">
+            {/* <div className=" absolute w-full">
                 <MyH2 small="" large="ご挨拶" image={""} image2={""}/>
-            </div>
+            </div> */}
+            <MyH2 small="" large="ご挨拶" image={""} image2={""}/>
             <div className="flex flex-col gap-10">
                 {greetings.map((greeting) => {
 
                     return <ScrollAnimation  key={greetings.indexOf(greeting)}>
                         <div>
-                            <GreetingImage image={greeting.image}/>
+                            {/* <GreetingImage image={greeting.image}/> */}
                             <Greeting greeting={greeting}/>
                         </div>
                     </ScrollAnimation>
@@ -32,11 +33,18 @@ function Greeting ( { greeting }: {
         body: string[],
         name: string,
         image: StaticImageData
+        image2: StaticImageData
 }}){
     return(
         <div className="bg-white w-full">
             <div className="flex items-center justify-center md:p-14 p-3">
                 <div className={`${zen_kurenaido.className} flex flex-col gap-10 md:text-3xl text-base`}>
+                    <Image
+                    src={greeting.image2}
+                    alt=""
+                    width={200}
+                    height={200}
+                    className="md:w-[60%] md:mx-[20%] w-full"/>
                     <div>{greeting.title}</div>
                     {greeting.body.map((p) => {
                         return(
