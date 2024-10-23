@@ -1,5 +1,6 @@
 import { getExhibitionsFloor } from "@/lib/action"
 import { Floors } from "./floors"
+import { FloorPlaces } from "./floorPlaces"
 
 export async function Map({ floor, id}: { floor: string, id: string}) {
 
@@ -9,9 +10,7 @@ export async function Map({ floor, id}: { floor: string, id: string}) {
     return(
         <div className="w-full bg-white">
             <Floors/>
-            <div>
-                
-            </div>
+            <FloorPlaces floor={floor}/>
         </div>
     )
 }
