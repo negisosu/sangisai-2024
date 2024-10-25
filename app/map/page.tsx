@@ -30,9 +30,14 @@ export default async function Page({searchParams}: {
             <PageMain title="マップ"/>
             <Header/>
             <PageContents>
-                <Suspense>
+            <div className="flex items-center justify-center h-[580px] w-full">
+            <div className=" md:text-7xl text-3xl ">
+                メンテナンス中...
+            </div>
+        </div>
+                {/* <Suspense>
                     <Map floor={floor}/>
-                </Suspense>
+                </Suspense> */}
             </PageContents>
         </div>
     )
