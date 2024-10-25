@@ -213,3 +213,87 @@ export const spPamphletImages = [
     spPamphlet11,
     spPamphlet12,
 ]
+
+export const tourScheduleAM = [
+    {
+        time: "11：40",
+        title: "情報センター講義室（3F西棟）集合",
+    },
+    {
+        time: "11：50〜",
+        title: "ツアー開始",
+    },
+    {
+        time: "〜12：30",
+        title: "研究室ツアー"
+    },
+    {
+        time: "〜12：45",
+        title: "部活動紹介",
+    },
+    {
+        time: "12：45",
+        title: "現地解散",
+    },
+]
+
+export const tourSchedulePM = [
+    {
+        time: "13：40",
+        title: "情報センター講義室（3F西棟）集合",
+    },
+    {
+        time: "13：50〜",
+        title: "ツアー開始",
+    },
+    {
+        time: "〜14：30",
+        title: "研究室ツアー",
+    },
+    {
+        time: "〜14：45",
+        title: "部活動紹介",
+    },
+    {
+        time: "14：45",
+        title: "現地解散",
+    },
+]
+
+export const tourLaboratory1 = [
+    {
+        course: "機械システム工学コース",
+        professor: "吉田(政)/齋藤"
+    },
+    {
+        course: "AIスマート工学コース",
+        professor: "浅川/吉田",
+    },
+    {
+        course: "電気電子工学コース",
+        professor: "川﨑/宮田",
+    },
+    {
+        course: "情報システム工学コース",
+        professor: "小林/知念",
+    },
+]
+
+export const tourLaboratory2 = [
+    {
+        course: "機械システム工学コース",
+        professor: "吉田(政)/齋藤",
+    },
+    {
+        course: "AIスマート工学コース",
+        professor: "浅川/吉田",
+    },
+    {
+        course: "電気電子工学コース",
+        professor: "曹/石崎",
+    },
+    {
+        course: "情報システム工学コース",
+        professor: "岩田(満)/ 田中",
+    },
+]
