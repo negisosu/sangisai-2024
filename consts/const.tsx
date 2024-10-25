@@ -5,6 +5,26 @@ import InstagramImage from "@/app/image/SNSicons/Instagram.png"
 import BigechorImage from "@/app/image/home/BIGECHOR.jpg"
 import koutyouImage from "@/app/image/home/koutyou.jpg"
 import iintyouImage from "@/app/image/home/iintyou.jpeg"
+import pcPamphlet1 from "@/app/image/visitor/産技祭パンフレット最終盤/1.png"
+import pcPamphlet2 from "@/app/image/visitor/産技祭パンフレット最終盤/2.png"
+import pcPamphlet3 from "@/app/image/visitor/産技祭パンフレット最終盤/3.png"
+import pcPamphlet4 from "@/app/image/visitor/産技祭パンフレット最終盤/4.png"
+import pcPamphlet5 from "@/app/image/visitor/産技祭パンフレット最終盤/5.png"
+import pcPamphlet6 from "@/app/image/visitor/産技祭パンフレット最終盤/6.png"
+import spPamphlet1 from "@/app/image/visitor/産技祭パンフレット最終盤sp/1.png"
+import spPamphlet2 from "@/app/image/visitor/産技祭パンフレット最終盤sp/2.png"
+import spPamphlet3 from "@/app/image/visitor/産技祭パンフレット最終盤sp/3.png"
+import spPamphlet4 from "@/app/image/visitor/産技祭パンフレット最終盤sp/4.png"
+import spPamphlet5 from "@/app/image/visitor/産技祭パンフレット最終盤sp/5.png"
+import spPamphlet6 from "@/app/image/visitor/産技祭パンフレット最終盤sp/6.png"
+import spPamphlet7 from "@/app/image/visitor/産技祭パンフレット最終盤sp/7.png"
+import spPamphlet8 from "@/app/image/visitor/産技祭パンフレット最終盤sp/8.png"
+import spPamphlet9 from "@/app/image/visitor/産技祭パンフレット最終盤sp/9.png"
+import spPamphlet10 from "@/app/image/visitor/産技祭パンフレット最終盤sp/10.png"
+import spPamphlet11 from "@/app/image/visitor/産技祭パンフレット最終盤sp/11.png"
+import spPamphlet12 from "@/app/image/visitor/産技祭パンフレット最終盤sp/12.png"
+
+
 
 
 
@@ -169,3 +189,27 @@ export const floorPlace = [
 7F西棟
 7F東棟
 */
+
+export const pcPamphletImages = [
+    pcPamphlet1,
+    pcPamphlet2,
+    pcPamphlet3,
+    pcPamphlet4,
+    pcPamphlet5,
+    pcPamphlet6
+]
+
+export const spPamphletImages = [
+    spPamphlet1,
+    spPamphlet2,
+    spPamphlet3,
+    spPamphlet4,
+    spPamphlet5,
+    spPamphlet6,
+    spPamphlet7,
+    spPamphlet8,
+    spPamphlet9,
+    spPamphlet10,
+    spPamphlet11,
+    spPamphlet12,
+]
