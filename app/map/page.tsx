@@ -29,12 +29,11 @@ export default async function Page({searchParams}: {
             <SNSIcons/>
             <PageMain title="マップ"/>
             <Header/>
-            <PageComingSoon/>
-            {/* <PageContents>
+            <PageContents>
                 <Suspense>
-                    <Map floor={floor} id={id}/>
+                    <Map floor={floor}/>
                 </Suspense>
-            </PageContents> */}
+            </PageContents>
         </div>
     )
 }

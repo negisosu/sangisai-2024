@@ -83,7 +83,9 @@ export function Exhibition({content} : { content: any }) {
             unoptimized={true}//繰り返し表示なので最適化オフ
             />
             <div className={`${zen_kurenaido.className} bg-white md:h-72 h-52 w-full`}>
-                <div className="md:text-lg text-xs md:m-2 md:block hidden">{`${content.floor}F-${content.place} | ${content.exhibitionName}`}</div>
+                <div className="md:text-lg text-xs md:m-2 md:block hidden">
+                    {`${content.floor}F-${content.place} | ${content.exhibitionName}`}
+                </div>
                 <div className="md:text-xl text-sm md:mx-4 md:my-2 mx-2 my-1 underline text-center text-blue-500 hover:text-blue-700">{content.title}</div>
                 <div className={`${zen_kurenaido.className} md:text-[1.6vw] md:leading-6 text-xs md:p-2 p-1`}>{`${content?.shortBody?.slice(0,70)}${content?.shortBody?.length > 70 ? "......" : ""}`}</div>
                 <div className="md:hidden text-right block text-xs text-blue-500 m-2">もっと見る→</div>

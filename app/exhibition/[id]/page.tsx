@@ -47,6 +47,12 @@ export default async function Page(
                 <div className="bg-white md:w-[80%] w-[90%] md:my-10 my-5">
                     <div className="md:text-5xl text-3xl md:my-8 my-4 text-center">{data.title}</div>
                     <div className="md:text-2xl text-lg md:m-14 m-8">{`${data.floor}F-${data.place} | ${data.exhibitionName}`}</div>
+                    <Link
+                    href={`/map?floor=${data.floor}`}
+                    className="md:text-xl text-lg md:m-4 m-2 text-blue-500 hover:text-blue-700 underline"
+                    >
+                        会場マップを見る→
+                    </Link>
                     <div className="md:flex md:my-10 my-4">
                         <div className="w-full">
                             <div className="flex items-center justify-center md:hidden">

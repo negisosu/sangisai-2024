@@ -23,10 +23,12 @@ import spPamphlet9 from "@/app/image/visitor/spPamphlet/9.png"
 import spPamphlet10 from "@/app/image/visitor/spPamphlet/10.png"
 import spPamphlet11 from "@/app/image/visitor/spPamphlet/11.png"
 import spPamphlet12 from "@/app/image/visitor/spPamphlet/12.png"
-
-
-
-
+import mapImage1F from "@/app/image/map/1F.png"
+import mapImage2F from "@/app/image/map/2F.png"
+import mapImage3F from "@/app/image/map/3F.png"
+import mapImage4F from "@/app/image/map/4F.png"
+import mapImage5F from "@/app/image/map/5F.png"
+import mapImage6F from "@/app/image/map/6F.png"
 
 export const tags = [//ジャンル分けはまだ変化する可能性があるから別ファイル管理
     '全て',
@@ -296,4 +298,13 @@ export const tourLaboratory2 = [
         course: "情報システム工学コース",
         professor: "岩田(満)/ 田中",
     },
+]
+
+export const mapImages = [
+    mapImage1F,
+    mapImage2F,
+    mapImage3F,
+    mapImage4F,
+    mapImage5F,
+    mapImage6F
 ]

@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
-const floors = [...Array(7)].map((v, i) => i + 1)//[1~7]の配列
+const floors = [...Array(6)].map((v, i) => i + 1)//[1~7]の配列
 
 export function Floors() {
 
