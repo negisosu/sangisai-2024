@@ -3,7 +3,7 @@
 import {client} from '@/lib/client';
 
 
-const revalidateTime = 1//800
+const revalidateTime = 1800
 //秒単位の再キャッシュかけるまでの時間
 
 //企画・出展紹介のところで検索と、ジャンル分けができるやつ
