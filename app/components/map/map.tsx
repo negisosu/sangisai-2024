@@ -1,6 +1,5 @@
 import { getExhibitionsFloor } from "@/lib/action"
 import { Floors } from "./floors"
-import { FloorPlaces } from "./botu/floorPlaces"
 import { MapImages } from "./mapImages"
 import { MapExhibitions } from "./mapExhibitions"
 
