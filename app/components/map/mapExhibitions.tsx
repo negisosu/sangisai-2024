@@ -21,7 +21,7 @@ export function MapExhibitions({ data }: { data: any}) {
                             <div
                             className="bg-white border border-black text-lg md:m-2 m-1 md:w-11 md:h-11 w-8 h-8 flex items-center justify-center rounded-full"
                             >
-                                {content.mapNumber}
+                                {content.mapNumber || data.indexOf(content) + 1}
                                 </div>
                             <div>
                                 <div className="text-xl text-blue-500 hover:text-blue-700 underline">{content.title}</div>
