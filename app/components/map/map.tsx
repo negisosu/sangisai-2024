@@ -6,18 +6,16 @@ import { MapExhibitions } from "./mapExhibitions"
 export async function Map({ floor}: { floor: string}) {
 
     const data = await getExhibitionsFloor(floor)
-    console.log(data)
-    // console.log(data.contents.length)
-    // data.contents.map((content: any) => {
-    //     console.log(content.title)
-    // })
 
+    const sortData = data.contents.sort((a: any, b: any) => {
+        return a.mapNumber - b.mapNumber
+    })
 
     return(
         <div className="w-full bg-white">
             <Floors/>
             <MapImages floor={floor}/>
-            <MapExhibitions data={data}/>
+            <MapExhibitions data={sortData}/>
         </div>
     )
 }

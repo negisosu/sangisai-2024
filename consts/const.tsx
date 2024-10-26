@@ -308,3 +308,47 @@ export const mapImages = [
     mapImage5F,
     mapImage6F
 ]
+
+const test = [
+    {
+        title: "a",
+        name: "aa",
+        number: 1,
+    },
+    {
+        title: "i",
+        name: "ii",
+        number: 7,
+    },
+    {
+        title: "y",
+        name: "yy",
+        number: 5,
+    },
+    {
+        title: "u",
+        name: "uu",
+        number: 4,
+    },
+    {
+        title: "o",
+        name: "oo",
+        number: 3,
+    },
+    {
+        title: "e",
+        name: "ee",
+        number: 6,
+    },
+    {
+        title: "k",
+        name: "kk",
+        number: 8,
+    },
+    {
+        title: "q",
+        name: "qq",
+        number: 2,
+    },
+
+]

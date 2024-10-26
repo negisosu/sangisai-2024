@@ -2,10 +2,16 @@ import { zen_kurenaido } from "@/fonts/fonts"
 import Link from "next/link"
 
 export function MapExhibitions({ data }: { data: any}) {
+
+    console.log("--------------------------------------")
+    console.log(data)
+    console.log(data.contents)
+    console.log("--------------------------------------")
+
     return(
         <div className={`${zen_kurenaido.className} grid md:grid-cols-2 grid-cols-1`}>
             {
-                data.contents.map((content: any) => {
+                data.map((content: any) => {
                     return(
                         <Link
                         key={content.id}
@@ -15,7 +21,7 @@ export function MapExhibitions({ data }: { data: any}) {
                             <div
                             className="bg-white border border-black text-lg md:m-2 m-1 md:w-11 md:h-11 w-8 h-8 flex items-center justify-center rounded-full"
                             >
-                                {data.contents.indexOf(content) + 1}
+                                {content.mapNumber}
                                 </div>
                             <div>
                                 <div className="text-xl text-blue-500 hover:text-blue-700 underline">{content.title}</div>
